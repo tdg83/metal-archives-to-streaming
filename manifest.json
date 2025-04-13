@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Metal Archives to YouTube Music",
+  "version": "1.0",
+  "description": "Right-click Metal Archives release links to search on YouTube Music. Query: \"<Band name> <release name>\"",
+  "permissions": ["contextMenus", "tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+"icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "browser_action": {
+    "default_title": "Search on YT Music",
+    "default_icon": "icon48.png"
+  }
+}
