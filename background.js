@@ -8,7 +8,6 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === "metalarchives-to-ytmusic") {
     const url = info.linkUrl;
 
-    // Only act on metal-archives release URLs
     const match = url.match(/metal-archives\.com\/albums\/([^/]+)\/([^/?#]+)/);
     if (match) {
       const band = decodeURIComponent(match[1]).replace(/_/g, " ");
