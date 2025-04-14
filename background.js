@@ -5,8 +5,8 @@ browser.contextMenus.removeAll().then(() => {
     contexts: ["link"],
     documentUrlPatterns: ["*://*.metal-archives.com/*"],
 	icons: {
-		"16": "streaming_icons/ytmusic16.png",
-		"32": "streaming_icons/ytmusic32.png"
+		"16": "ytmusic16.png",
+		"32": "ytmusic32.png"
 	}
   });
 
@@ -16,8 +16,8 @@ browser.contextMenus.removeAll().then(() => {
     contexts: ["link"],
     documentUrlPatterns: ["*://*.metal-archives.com/*"],
 	icons: {
-		"16": "streaming_icons/spotify16.png",
-		"32": "streaming_icons/spotify32.png"
+		"16": "spotify16.png",
+		"32": "spotify32.png"
 	}
   });
   
@@ -27,8 +27,8 @@ browser.contextMenus.removeAll().then(() => {
     contexts: ["link"],
     documentUrlPatterns: ["*://*.metal-archives.com/*"],
 	icons: {
-		"16": "streaming_icons/bandcamp16.png",
-		"32": "streaming_icons/bandcamp32.png"
+		"16": "bandcamp16.png",
+		"32": "bandcamp32.png"
 	}
   });
 });
