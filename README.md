@@ -24,14 +24,13 @@ Install directly from the Firefox Add-ons site:
 
 ### Manual Installation (as a Local Extension)
 
-1. Download the repository as a `.zip` file  
-2. Extract the contents to a folder  
-3. Open a new tab in Firefox  
-4. In the address bar, go to: `about:debugging`  
-5. Click on **This Firefox**  
-6. Click **Load Temporary Add-on...**  
-7. Navigate to the extracted folder and select the `manifest.json` file  
-8. Open [metal-archives.com](https://www.metal-archives.com/) and start using the extension!
+1. Download the repositories files
+2. Open a new tab in Firefox  
+3. In the address bar, go to: `about:debugging`  
+4. Click on **This Firefox**  
+5. Click **Load Temporary Add-on...**  
+6. Navigate to the downloaded files and select the `manifest.json` file  
+7. Open [metal-archives.com](https://www.metal-archives.com/) and start using the extension!
 
 ---
 
