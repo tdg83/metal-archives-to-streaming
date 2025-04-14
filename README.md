@@ -3,6 +3,8 @@
 A simple browser add-on for [metal-archives.com](https://www.metal-archives.com/).  
 Right-click on a band's release to automatically search for `"<band> <release>"` on various streaming platforms.
 
+This add-on is not officially related to or supported by metal-archives.com.
+
 ---
 
 ## 🎧 Supported Streaming Platforms
