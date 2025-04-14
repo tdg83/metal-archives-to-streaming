@@ -24,7 +24,7 @@ Install directly from the Firefox Add-ons site:
 
 ### Manual Installation (as a Local Extension)
 
-1. Download the repositories files
+1. Download the repositories' files
 2. Open a new tab in Firefox  
 3. In the address bar, go to: `about:debugging`  
 4. Click on **This Firefox**  
