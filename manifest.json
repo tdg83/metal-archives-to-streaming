@@ -1,15 +1,23 @@
 {
   "manifest_version": 2,
   "name": "Metal Archives to streaming",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Right-click Metal Archives release links to search on YouTube Music or Spotify. Query: \"<Band name> <release name>\"",
   "permissions": [
     "contextMenus",
     "tabs",
+    "storage",
     "*://*.metal-archives.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png"
+    }
   },
   "icons": {
     "16": "icon16.png",
