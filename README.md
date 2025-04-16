@@ -11,7 +11,12 @@ This add-on is not officially related to or supported by metal-archives.com.
 
 - YouTube Music  
 - Spotify  
-- Bandcamp  
+- Bandcamp
+- Soundcloud
+- Apple Music
+- Deezer
+- Amazon Music
+- Tidal
 
 ---
 
