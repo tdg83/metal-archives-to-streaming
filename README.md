@@ -5,6 +5,10 @@ Right-click on a band's release to automatically search for `"<band> <release>"`
 
 This add-on is not officially related to or supported by metal-archives.com.
 
+![image](https://github.com/user-attachments/assets/91bcd946-43a5-4c88-b21f-b95a01e5a409)
+![image](https://github.com/user-attachments/assets/93968076-259b-40a0-a049-b8a3e7f932c3)
+
+
 ---
 
 ## 🎧 Supported Streaming Platforms
