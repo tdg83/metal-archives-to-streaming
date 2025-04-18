@@ -43,10 +43,4 @@ Install directly from the Firefox Add-ons site:
 6. Navigate to the downloaded files and select the `manifest.json` file  
 7. Open [metal-archives.com](https://www.metal-archives.com/) and start using the extension!
 
----
 
-## ⚠️ Compatibility
-
-This is a **Manifest V2** extension.  
-It does **not** work on Google Chrome, as V2 support has been deprecated.  
-The add-on was built and tested on **Firefox**, but may also work on other V2-compatible browsers.
