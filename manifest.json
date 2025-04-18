@@ -1,18 +1,20 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Metal Archives to streaming",
-  "version": "1.3",
+  "version": "1.4",
   "description": "Right-click Metal Archives release links to search on your favorite streaming service. Query: \"<Band name> <release name>\"",
   "permissions": [
     "contextMenus",
     "tabs",
-    "storage",
-    "*://*.metal-archives.com/*"
+    "storage"
+  ],
+  "host_permissions": [
+	"*://*.metal-archives.com/*"
   ],
   "background": {
     "scripts": ["background.js"]
   },
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
@@ -23,5 +25,10 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
+  },
+  "browser_specific_settings": {
+	"gecko": {
+		"id": "{8592e77e-41be-4013-9a40-4f3ef81788fa}"
+	}
   }
 }
