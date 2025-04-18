@@ -92,6 +92,13 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 async function rebuildContextMenus() {
   await browser.contextMenus.removeAll();
+  
+  browser.contextMenus.create({
+		id: "searchma",
+		title: "Search selection on Metal Archives",
+		contexts: ["selection", "link"]
+	});
+
 
   browser.contextMenus.create({
     id: "streamingSearch",
@@ -119,6 +126,13 @@ async function rebuildContextMenus() {
 rebuildContextMenus();
 
 browser.contextMenus.onShown.addListener(async (info, tab) => {
+  const pageUrl = tab?.url ?? "";
+
+  const onMetalArchives = /:\/\/(?:www\.)?metal-archives\.com/.test(pageUrl);
+  await browser.contextMenus.update("searchma", {
+    visible: !onMetalArchives
+  });
+  
   const match = info.linkUrl?.match(/:\/\/(?:www\.)?metal-archives\.com\/albums\/([^/]+)\/([^/?#]+)/);
 
   if (match) {
@@ -139,19 +153,27 @@ browser.contextMenus.onShown.addListener(async (info, tab) => {
 });
 
 browser.contextMenus.onClicked.addListener(async (info, tab) => {
-  const url = info.linkUrl;
-  const match = url.match(/:\/\/(?:www\.)?metal-archives\.com\/albums\/([^/]+)\/([^/?#]+)/);
+	if (info.menuItemId === "searchma") {
+		if (info.selectionText) {
+			const query = encodeURIComponent(info.selectionText).trim();
+			const sUrl = `https://www.metal-archives.com/search?searchString=${query}&type=band_name`;
+			browser.tabs.create({ url: sUrl });
+		}
+	} else {
+		const url = info.linkUrl;
+		const match = url.match(/:\/\/(?:www\.)?metal-archives\.com\/albums\/([^/]+)\/([^/?#]+)/);
 
-  if (match) {
-    const band = decodeURIComponent(match[1]).replace(/_/g, " ");
-    let album = decodeURIComponent(match[2]).replace(/_/g, " ");
-    album = await applySelfTitled(band, album);
+		if (match) {
+			const band = decodeURIComponent(match[1]).replace(/_/g, " ");
+			let album = decodeURIComponent(match[2]).replace(/_/g, " ");
+			album = await applySelfTitled(band, album);
 
-    const query = encodeURIComponent(`${band} ${album}`);
-    const platform = platforms.find(p => p.id === info.menuItemId);
-    if (platform) {
-      let searchUrl = `${platform.urlPrefix}${query}`;
-      browser.tabs.create({ url: searchUrl });
-    }
-  }
+			const query = encodeURIComponent(`${band} ${album}`);
+			const platform = platforms.find(p => p.id === info.menuItemId);
+			if (platform) {
+				let searchUrl = `${platform.urlPrefix}${query}`;
+				browser.tabs.create({ url: searchUrl });
+			}
+		}
+	}
 });
