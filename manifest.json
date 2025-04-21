@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Metal Archives to streaming",
-  "version": "1.4",
+  "version": "1.5",
   "description": "Right-click Metal Archives release links to search on your favorite streaming service. Query: \"<Band name> <release name>\"",
   "permissions": [
     "contextMenus",

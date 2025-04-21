@@ -28,8 +28,7 @@ This add-on is not officially related to or supported by metal-archives.com.
 
 ### Firefox Add-on
 
-Install directly from the Firefox Add-ons site:  
-➡️ [Metal Archives to Streaming on AMO](https://addons.mozilla.org/en-US/firefox/addon/metal-archives-to-streaming/)
+Install directly from the Firefox Add-ons site:  ➡️ [Metal Archives to Streaming on AMO](https://addons.mozilla.org/en-US/firefox/addon/metal-archives-to-streaming/)
 
 ---
 
